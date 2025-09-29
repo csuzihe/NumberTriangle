@@ -89,6 +89,7 @@ public class NumberTriangle {
      */
     public int retrieve(String path) {
         NumberTriangle cur = this;
+
         for (int i = 0; i < path.length(); i++) {
             if (path.charAt(i) == 'l') {
                 cur = cur.left;
@@ -96,6 +97,7 @@ public class NumberTriangle {
                 cur = cur.right;
             }
         }
+
         return cur.root;
     }
 
@@ -127,8 +129,10 @@ public class NumberTriangle {
 
             line = line.trim();
             if (!line.isEmpty()) {
+
                 String[] parts = line.split("\\s+");
                 java.util.List<NumberTriangle> currRow = new java.util.ArrayList<>(parts.length);
+
                 for (String p : parts) {
                     currRow.add(new NumberTriangle(Integer.parseInt(p)));
                 }
