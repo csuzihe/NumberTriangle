@@ -128,6 +128,7 @@ public class NumberTriangle {
         while (line != null) {
 
             line = line.trim();
+
             if (!line.isEmpty()) {
 
                 String[] parts = line.split("\\s+");
